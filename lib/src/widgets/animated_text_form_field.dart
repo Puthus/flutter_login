@@ -327,11 +327,13 @@ class _AnimatedPasswordTextFormFieldState
             Icons.visibility,
             size: 25.0,
             semanticLabel: 'show password',
+            color:Colors.black,
           ),
           secondChild: Icon(
             Icons.visibility_off,
             size: 25.0,
             semanticLabel: 'hide password',
+            color:Colors.black,
           ),
           crossFadeState: _obscureText
               ? CrossFadeState.showFirst

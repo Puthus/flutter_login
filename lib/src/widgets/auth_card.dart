@@ -627,7 +627,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       interval: _nameTextFieldLoadingAnimationInterval,
       labelText: messages.userHint,
       autofillHints: [_getAutofillHints(widget.userType)],
-      prefixIcon: Icon(FontAwesomeIcons.solidUserCircle),
+      prefixIcon: Icon(FontAwesomeIcons.solidUserCircle,color:Colors.black),
       keyboardType: _getKeyboardType(widget.userType),
       textInputAction: TextInputAction.next,
       onFieldSubmitted: (value) {
@@ -971,7 +971,7 @@ class _RecoverCardState extends State<_RecoverCard>
       controller: _nameController,
       width: width,
       labelText: messages.userHint,
-      prefixIcon: Icon(FontAwesomeIcons.solidUserCircle),
+      prefixIcon: Icon(FontAwesomeIcons.solidUserCircle,color:Colors.black),
       keyboardType: _getKeyboardType(widget.userType),
       autofillHints: [_getAutofillHints(widget.userType)],
       textInputAction: TextInputAction.done,

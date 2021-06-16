@@ -302,7 +302,7 @@ class _AnimatedPasswordTextFormFieldState extends State<AnimatedPasswordTextForm
       autofillHints: widget.autofillHints,
       labelText: widget.labelText,
       prefixIcon: Icon(
-        FontAwesomeIcons.lockOpen,
+        FontAwesomeIcons.lock,
         size: 20,
         color: Colors.black,
       ),

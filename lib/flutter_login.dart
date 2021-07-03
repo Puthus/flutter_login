@@ -241,6 +241,7 @@ class FlutterLogin extends StatefulWidget {
       this.hideForgotPasswordButton = false,
       this.hideSignUpButton = false,
       this.loginAfterSignUp = true,
+      this.autoLogin = false,
       this.footer,
       this.hideProvidersTitle = false})
       : super(key: key);
@@ -312,6 +313,9 @@ class FlutterLogin extends StatefulWidget {
   /// Set to false to return back to sign in page after successful sign up
   final bool loginAfterSignUp;
 
+  /// Set to true to autologin from shared prefs
+  final bool autoLogin;
+
   /// Optional footer text for example a copyright notice
   final String? footer;
 
@@ -374,6 +378,9 @@ class _FlutterLoginState extends State<FlutterLogin>
     Future.delayed(const Duration(seconds: 1), () {
       _loadingController!.forward();
     });
+    // if(widget.auoLogin){
+
+    // }
   }
 
   @override
@@ -652,6 +659,7 @@ class _FlutterLoginState extends State<FlutterLogin>
                             widget.hideForgotPasswordButton,
                         loginAfterSignUp: widget.loginAfterSignUp,
                         hideProvidersTitle: widget.hideProvidersTitle,
+                        autoLogin: widget.autoLogin,
                       ),
                     ),
                     Positioned(

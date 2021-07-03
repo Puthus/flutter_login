@@ -37,6 +37,7 @@ class AuthCard extends StatefulWidget {
       this.hideForgotPasswordButton = false,
       this.hideSignUpButton = false,
       this.loginAfterSignUp = true,
+      this.autoLogin = false,
       this.hideProvidersTitle = false})
       : super(key: key);
 
@@ -49,6 +50,7 @@ class AuthCard extends StatefulWidget {
   final bool hideForgotPasswordButton;
   final bool hideSignUpButton;
   final bool loginAfterSignUp;
+  final bool autoLogin;
   final LoginUserType userType;
   final bool hideProvidersTitle;
 
@@ -747,6 +749,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
     );
   }
 
+if(widget.autoLogin){
+  _submit();
+}
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<Auth>(context, listen: true);

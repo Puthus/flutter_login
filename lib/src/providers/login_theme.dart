@@ -53,10 +53,16 @@ class LoginTheme with ChangeNotifier {
     this.beforeHeroFontSize = 48.0,
     this.afterHeroFontSize = 15.0,
     this.footerBackgroundColor,
+    this.switchAuthTextColor,
     this.footerTextStyle,
     this.authButtonPadding,
     this.providerButtonPadding,
-    this.footerBottomPadding = 0,
+    this.footerBottomPadding = 5,
+    this.logoWidth,
+    this.primaryColorAsInputLabel = false,
+    this.headerMargin,
+    this.cardInitialHeight,
+    this.cardTopPosition,
   });
 
   /// The background color of the login page for light gradient; if provided,
@@ -111,6 +117,9 @@ class LoginTheme with ChangeNotifier {
   /// Color of the footer background
   final Color? footerBackgroundColor;
 
+  /// Color of the switch authentication button
+  final Color? switchAuthTextColor;
+
   /// Text style for footer text
   final TextStyle? footerTextStyle;
 
@@ -122,4 +131,27 @@ class LoginTheme with ChangeNotifier {
 
   /// Provide custom bottom padding for the footer.
   final double footerBottomPadding;
+
+  /// Set the width of the logo. Defaults to 0.75 times the card size.
+  /// Value can be between 0 and 1 (or higher) where 1 is the full width
+  /// of the login card.
+  final double? logoWidth;
+
+  /// Set to true if you want to use the primary color for input labels.
+  final bool primaryColorAsInputLabel;
+
+  /// The distance between the header and the login screen
+  ///
+  /// Default: 15
+  final double? headerMargin;
+
+  /// The initial height of the login card
+  ///
+  /// Default: 300
+  final double? cardInitialHeight;
+
+  /// The top position of the login card
+  ///
+  /// Default: deviceSize.height / 2 - cardInitialHeight / 2
+  final double? cardTopPosition;
 }

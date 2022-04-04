@@ -35,7 +35,7 @@ class TextFieldUtils {
         return const Icon(FontAwesomeIcons.phoneSquareAlt);
       case LoginUserType.email:
       default:
-        return const Icon(FontAwesomeIcons.envelopeSquare);
+        return const Icon(FontAwesomeIcons.envelopeSquare,color:Colors.black);
     }
   }
 
